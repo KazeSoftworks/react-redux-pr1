@@ -20,10 +20,11 @@ const counterSlice = createSlice({
 		},
 	},
 });
-
 const store = configureStore({
-	reducer: { counter: counterSlice.reducer },
+	reducer: counterSlice.reducer,
 	devTools: process.env.NODE_ENV !== 'production',
 });
+
+export const counterActions = counterSlice.actions;
 
 export default store;
